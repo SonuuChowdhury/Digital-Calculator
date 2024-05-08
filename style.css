@@ -79,6 +79,7 @@ body{
 
 #CalculatorText{
     font-size: 2rem;
+    cursor:default;
 }
 
 
@@ -103,6 +104,8 @@ body{
     text-align: right;
     font-size: 1.4rem;
     border-radius: 15px;
+    text-align: right;
+    font-size: 2.5rem;
 }
 
 .keyBoardArea{
@@ -152,12 +155,11 @@ body{
     align-items: center;
     justify-content: center;
     border: 2px solid black; 
-
+    cursor:pointer;
 }
 
-.keys:hover{
-    height: 40px;
-    width: 57px;
+.keys:active{
+    transform: scale(0.95);
 
 }
 
@@ -174,6 +176,7 @@ body{
     align-items: center;
     justify-content: center;
     border: 2px solid black; 
+    cursor: pointer;
 
 }
 .delKey{
@@ -183,9 +186,8 @@ body{
     font-weight: bolder;
 }
 
-.opKeys:hover{
-    height: 40px;
-    width: 57px;
+.opKeys:active{
+    transform: scale(0.95);
 
 }
 
@@ -207,6 +209,12 @@ body{
     justify-content: center;
     border: 2px solid black; 
     border-radius: 18px;
+    cursor: pointer;
+
+}
+
+.controlKeys:active{
+    transform: scale(0.95);
 
 }
 
