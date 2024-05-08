@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: #669bbc;  
+}
+
+.mainDiv1{
+    height: 150px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.nameLogoThemeBox{
+    height: 60px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+
+}
+
+
+  /* The switch - the box around the slider */
+  .container {
+    width: 51px;
+    height: 31px;
+    position: relative;
+  }
+  
+  /* Hide default HTML checkbox */
+  .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  
+  .switch {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #e9e9eb;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  /* The slider */
+  .slider {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    left: calc(50% - 27px/2 - 10px);
+    top: calc(50% - 27px/2);
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+  }
+  
+  .checkbox:checked + .switch {
+    background-color: #003049;
+  }
+  
+  .checkbox:checked + .switch .slider {
+    left: calc(50% - 27px/2 + 10px);
+    top: calc(50% - 27px/2);
+  }
+  
+
+
+
+#CalculatorText{
+    font-size: 2rem;
+}
+
+
+.themeText{
+    margin-left: 80px;
+    margin-right: 5px;
+}
+
+.DisplayBox{
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+.display{
+    height: 50px;
+    width: 328px;
+    background-color:#003049 ;
+    color: white;
+    text-align: right;
+    font-size: 1.4rem;
+    border-radius: 15px;
+}
+
+.keyBoardArea{
+    height:300px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+.keyBoard{
+    height: 300px;
+    width: 328px;
+    background-color:#003049 ;
+    border-radius: 20px;
+    padding-top: 10px;
+
+
+}
+
+
+
+/* Here is the full design of numpads and controllers combined */
+.numPad{
+    height: 240px;
+    width: 328px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+}
+
+.keys{
+    height: 46px;
+    width: 60px;
+    border-radius: 13px;
+    background-color:#dad7cd;
+    margin-left: 5px;
+    color: #003049 ;
+    font-size: 2rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black; 
+
+}
+
+.keys:hover{
+    height: 40px;
+    width: 57px;
+
+}
+
+.opKeys{
+    height: 46px;
+    width: 60px;
+    border-radius: 13px;
+    background-color:#dad7cd;
+    margin-left: 5px;
+    color: #003049 ;
+    font-size: 2rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black; 
+
+}
+.delKey{
+    font-size: 1.5rem;
+    background-color: red;
+    color: #dad7cd;
+    font-weight: bolder;
+}
+
+.opKeys:hover{
+    height: 40px;
+    width: 57px;
+
+}
+
+
+.controls{
+    height: 55px;
+    width: 328px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+
+.controlKeys{
+    height: 46px;
+    width:130px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black; 
+    border-radius: 18px;
+
+}
+
+.resetKey{
+    background-color: red;
+    color: #dad7cd;
+    font-size: 1.4rem;
+    font-weight: bolder;
+
+}
+
+.equalKey{
+    background-color: #a7c957;
+    color: #dad7cd;
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+}
