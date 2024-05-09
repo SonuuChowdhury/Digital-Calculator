@@ -41,26 +41,26 @@ let operatorIndicator=0;
 function assignValue(n){
     
     if (flagIndicator==0) {
-        firstNumber=firstNumber+n;
+        firstNumber+=n;
         display.value=firstNumber;  
     }
     
     else{
         if (operatorIndicator==1) {
-            secoundNumber=secoundNumber+n;
+            secoundNumber+=n;
             display.value="Ans + "+secoundNumber; 
             
         }
         else if(operatorIndicator==2){
-            secoundNumber=secoundNumber+n;
+            secoundNumber+=n;
             display.value="Ans - "+secoundNumber; 
         }
         else if(operatorIndicator==3){
-            secoundNumber=secoundNumber+n;
+            secoundNumber+=n;
             display.value="Ans x "+secoundNumber; 
         }
         else if(operatorIndicator==4){
-            secoundNumber=secoundNumber+n;
+            secoundNumber+=n;
             display.value="Ans / "+secoundNumber; 
         }
 
@@ -124,6 +124,11 @@ function delValue(n){
 }
 
 function answerControl(){
+    let secVar=display.value;
+    secoundNumber=secVar.slice(6,-1);
+    console.log(secoundNumber);
+
+
     
 }
 
