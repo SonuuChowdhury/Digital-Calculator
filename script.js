@@ -1,6 +1,6 @@
 
 
-// Accesing all the components
+//            Accesing all the components
 let multiplyKey=document.querySelector(".multiplyKey");
 let addKey=document.querySelector(".addKey");
 let minusKey=document.querySelector(".minusKey");
@@ -21,8 +21,9 @@ let delKey=document.querySelector(".delKey");
 let equalKey=document.querySelector(".equalKey");
 let resetKey=document.querySelector(".resetKey");
 
+
+//          Variables
 display.value="0";
-// Variables
 let firstNumber="";
 let secoundNumber="";
 let flagIndicator=0;
@@ -36,16 +37,17 @@ let operatorIndicator=0;
 // 3--> *
 // 4--> /
 
+  
+//                  Functions
 
-// functions
-function assignValue(n){
+function assignValue(n){ //Assigning Values n to the display
     
-    if (flagIndicator==0) {
+    if (flagIndicator==0) { //for first value
         firstNumber+=n;
         display.value=firstNumber;  
     }
     
-    else{
+    else{ //for secound va;ue
         if (operatorIndicator==1) {
             secoundNumber+=n;
             display.value="Ans + "+secoundNumber; 
@@ -67,28 +69,28 @@ function assignValue(n){
     }
 }
 
-function operatorControlInit(opr){
+function operatorControlInit(opr){ //taking actions according to the operator selected by the user
     if (opr=="+") {
-        val1=display.value;
+        val1=Number(display.value);
         flagIndicator=1;  
         operatorIndicator=1;
         display.value="Ans +";
         
     }
     else if(opr=="-"){
-        val1=display.value;
+        val1=Number(display.value);
         flagIndicator=1;  
         operatorIndicator=2;
         display.value="Ans -";
     }
     else if(opr=="*"){
-        val1=display.value;
+        val1=Number(display.value);
         flagIndicator=1;  
         operatorIndicator=3;
         display.value="Ans x";
     }
     else{
-        val1=display.value;
+        val1=Number(display.value);
         flagIndicator=1;  
         operatorIndicator=4;
         display.value="Ans /";
@@ -96,48 +98,92 @@ function operatorControlInit(opr){
 }
 
 
-function delValue(n){
+function delValue(n){ //Deleting a value by string slicing
     if (n==0) {
-        firstNumber="";
+        firstNumber=firstNumber.slice(0,-1);
         display.value=firstNumber;   
     }
     else{
         if (operatorIndicator==1) {
-            secoundNumber="";
+            secoundNumber=secoundNumber.slice(0,-1);
             display.value="Ans + "+secoundNumber;   
         }
         else if (operatorIndicator==2){
-            secoundNumber="";
+            secoundNumber=secoundNumber.slice(0,-1);
             display.value="Ans - "+secoundNumber;
 
         }
         else if (operatorIndicator==3){
-            secoundNumber="";
+            secoundNumber=secoundNumber.slice(0,-1);
             display.value="Ans x "+secoundNumber;
         }
 
         else if (operatorIndicator==4){
-            secoundNumber="";
+            secoundNumber=secoundNumber.slice(0,-1);
             display.value="Ans / "+secoundNumber;
         }
     }
 }
 
-function answerControl(){
+function answerControl(){ //answer function calling by considering the  different values of operatorIndicator 
     let secVar=display.value;
-    secoundNumber=secVar.slice(6,-1);
-    console.log(secoundNumber);
+    secoundNumber=secVar.slice(5,secVar.length);
+    val2=Number(secoundNumber);
+    if (operatorIndicator==1) {
+        addNumbers(val1,val2); 
+    }
+    else if(operatorIndicator==2){
+        subtractNumbers(val1,val2);
+    }
+    else if(operatorIndicator==3){
+        multiplyNumbers(val1,val2);
+    }
+    else if(operatorIndicator==4){
+        divideNumbers(val1,val2);
+    }
+}
 
+function addNumbers(a,b){ //add function
+    let sumValue=a+b;
+    display.value=sumValue;
+}
 
-    
+function subtractNumbers(a,b){ //subtract function
+    let subValue=a-b;
+    display.value=subValue;
+}
+
+function multiplyNumbers(a,b){ //multiply function
+    let mulValue=a*b;
+    display.value=mulValue;
+}
+
+function divideNumbers(a,b){ //divide function
+    let divValue=a/b;
+    display.value=divValue;
+}
+
+function resetOperations(){ //Reseting the whole calculator
+    display.value="0";
+    firstNumber="";
+    secoundNumber="";
+    flagIndicator=0;
+    val1=0;
+    val2=0;
+    operatorIndicator=0;
 }
 
 
 
-KN1.addEventListener('click', function(){
+
+
+//           Event listeners for all the keys
+
+// Numpad
+KN1.addEventListener('click',  function(){
     assignValue(1);
 });
-KN2.addEventListener('click', function(){
+KN2.addEventListener('click',  function(){
     assignValue(2);
 });
 KN3.addEventListener('click', function(){
@@ -164,14 +210,14 @@ KN9.addEventListener('click', function(){
 KN0.addEventListener('click', function(){
     assignValue(0);
 });
+
+//              Operations
 KNdecimalKey.addEventListener('click',function(){
     assignValue(".");
-
 });
 delKey.addEventListener('click',function(){
     delValue(flagIndicator);
 });
-
 minusKey.addEventListener('click', function(){
     operatorControlInit("-");
 });
@@ -184,9 +230,11 @@ multiplyKey.addEventListener('click', function(){
 divideKey.addEventListener('click', function(){
     operatorControlInit("/");
 });
-
 equalKey.addEventListener('click',function(){
     answerControl();
+});
+resetKey.addEventListener('click', function(){
+    resetOperations();
 });
 
 
