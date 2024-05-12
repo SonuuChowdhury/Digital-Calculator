@@ -1,5 +1,3 @@
-
-
 //            Accesing all the components
 let multiplyKey=document.querySelector(".multiplyKey");
 let addKey=document.querySelector(".addKey");
@@ -20,6 +18,9 @@ let display=document.querySelector(".display");
 let delKey=document.querySelector(".delKey");
 let equalKey=document.querySelector(".equalKey");
 let resetKey=document.querySelector(".resetKey");
+
+let checkbox = document.querySelector('.checkbox');
+
 
 
 //          Variables
@@ -173,6 +174,23 @@ function resetOperations(){ //Reseting the whole calculator
     operatorIndicator=0;
 }
 
+function checkboxOperation(){
+    if (checkbox.checked) {
+        setLightTheme();
+    } else {
+        setDarkTheme();
+    }
+}
+
+function setLightTheme(){
+
+}
+
+function setDarkTheme(){
+
+    
+}
+
 
 
 
@@ -237,5 +255,8 @@ resetKey.addEventListener('click', function(){
     resetOperations();
 });
 
+checkbox.addEventListener('change', function(){
+    checkboxOperation();
+});
 
 
