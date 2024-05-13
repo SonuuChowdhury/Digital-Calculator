@@ -21,6 +21,7 @@ let resetKey=document.querySelector(".resetKey");
 let checkbox = document.querySelector('.checkbox');
 let keyBoard= document.querySelector(".keyBoard");
 let fnButtons=document.querySelectorAll(".fnButtons");
+let topText=document.querySelectorAll(".topText");
 
 
 
@@ -185,12 +186,18 @@ function checkboxOperation(){
 
 function setLightTheme(){
     keyBoard.style.backgroundColor="white";
+    keyBoard.style.border="3px solid black";
     display.style.backgroundColor="white";
+    display.style.border="3px solid black";
     display.style.color="black";
     fnButtons.forEach(fnButtons  => {
         fnButtons.style.backgroundColor="#000000CC";
         fnButtons.style.color="white";  
     });
+    topText.forEach(topText => {
+        topText.style.color="white";
+    });
+    
  
 }
 
