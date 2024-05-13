@@ -18,8 +18,9 @@ let display=document.querySelector(".display");
 let delKey=document.querySelector(".delKey");
 let equalKey=document.querySelector(".equalKey");
 let resetKey=document.querySelector(".resetKey");
-
 let checkbox = document.querySelector('.checkbox');
+let keyBoard= document.querySelector(".keyBoard");
+let fnButtons=document.querySelectorAll(".fnButtons");
 
 
 
@@ -183,7 +184,14 @@ function checkboxOperation(){
 }
 
 function setLightTheme(){
-
+    keyBoard.style.backgroundColor="white";
+    display.style.backgroundColor="white";
+    display.style.color="black";
+    fnButtons.forEach(fnButtons  => {
+        fnButtons.style.backgroundColor="#000000CC";
+        fnButtons.style.color="white";  
+    });
+ 
 }
 
 function setDarkTheme(){
