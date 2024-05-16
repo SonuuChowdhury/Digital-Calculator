@@ -184,6 +184,33 @@ function checkboxOperation(){
     }
 }
 
+
+
+function setDarkTheme(){
+    keyBoard.style.backgroundColor="#003049";
+    keyBoard.style.border="none";
+    display.style.backgroundColor="#003049";
+    display.style.border="none";
+    display.style.color="white";
+    fnButtons.forEach(fnButtons  => {
+        fnButtons.style.backgroundColor="#dad7cd";
+        fnButtons.style.color="#003049";  
+    });
+    topText.forEach(topText => {
+        topText.style.color="black";
+    });
+    delKey.style.backgroundColor="";
+    delKey.style.color="#dad7cd";
+
+    resetKey.style.backgroundColor="red";
+    resetKey.style.color="#dad7cd";
+
+    equalKey.style.backgroundColor="#a7c957";
+    equalKey.style.color="#dad7cd";
+
+}
+
+
 function setLightTheme(){
     keyBoard.style.backgroundColor="white";
     keyBoard.style.border="3px solid black";
@@ -197,16 +224,9 @@ function setLightTheme(){
     topText.forEach(topText => {
         topText.style.color="white";
     });
-    
- 
+
+
 }
-
-function setDarkTheme(){
-
-    
-}
-
-
 
 
 
