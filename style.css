@@ -233,3 +233,16 @@ body{
     font-weight: bolder;
 
 }
+
+.infoSec{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.3rem;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+}
