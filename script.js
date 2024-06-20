@@ -249,7 +249,7 @@ KN5.addEventListener('click', function(){
     assignValue(5);
 });
 KN6.addEventListener('click', function(){
-    assignValue(4);
+    assignValue(6);
 });
 KN7.addEventListener('click', function(){
     assignValue(7);
