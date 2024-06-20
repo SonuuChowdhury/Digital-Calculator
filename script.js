@@ -43,12 +43,16 @@ let operatorIndicator = 0;
 function assignValue(n) {
   //Assigning Values n to the display
 
+  if (flagIndicator > 0) {
+    secoundNumber = 0;
+  }
+
   if (flagIndicator == 0) {
     //for first value
     firstNumber += n;
     display.value = firstNumber;
   } else {
-    //for secound va;ue
+    //for secound value
     if (operatorIndicator == 1) {
       secoundNumber += n;
       display.value = "Ans + " + secoundNumber;
